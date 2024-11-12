@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>予定表</title>
+	<meta name="description">
+
+	<style>
+		html {
+			background-color: #d4f3ff;
+			margin-top: 3%;
+		}
+
+		.schedule input[type="button"] {
+			padding: 10px 20px;
+			font-size: 18px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+			margin-bottom: 20px;
+		}
+
+		.schedule {
+			background-color: #fff;
+			border-radius: 30px;
+			box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+
+			padding: 20px;
+			max-width: 600px;
+			margin: 0 auto;
+			text-align: left;
+		}
+
+		.schedule h1 {
+			font-size: 40px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.schedule .day {
+			font-size: 30px;
+			font-weight: bold;
+			margin-bottom: 20px;
+			padding-left: 20px;
+		}
+
+		.schedule .class {
+			font-size: 30px;
+			margin-bottom: 10px;
+			padding-left: 20px;
+		}
+
+		a {
+			font-size: 25px;
+		}
+
+
+		img {
+			width: 500px;
+			height: auto;
+			position: absolute;
+			top:  30%; /*追記*/
+			left: 45%; /*追記*/
+		}
+		h3{
+			position: absolute;
+			top:  30%;
+			left: 55%;
+			font-size: 40px;
+		}
+	</style>
+
+</head>
+
+<body style="margin-top: 0px;margin-left: 0px;">
+	<div id="splash">
+		<div id="splash_text"></div>
+	</div>
+
+	<main>
+		<div id="container">
+			<div class="schedule">
+				<h1>今日の授業スケジュール</h1>
+				<div class="day">今日は<span id="dayOfWeek"></span>曜日ですたぶん。</div>
+				<div class="classes">
+					<div class="class" id="class1"></div>
+					<div class="class" id="class2"></div>
+					<div class="class" id="class3"></div>
+					<div class="class" id="class4"></div>
+					<div class="class" id="class8"></div>
+					<div class="class" id="class5"></div>
+					<div class="class" id="class6"></div>
+					<div class="class" id="class7"></div>
+					<input type="button" onclick="next_day()" value="次の日→">
+					<input type="button" onclick="today()" value="本日の予定↓">
+					<li><a href="PBL_1.html">予定組み換え</a></li>
+				
+				</div>
+			</div>
+
+			<img src="保育園・幼稚園の女の子.png">
+			<h3>ざぁーこ♡</h3>
+			<script src="PBL.js"></script>
+
+	</main>
+
+</body>
+
+</html>

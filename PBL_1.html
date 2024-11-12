@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>予定表</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        .mgr-10 {
+            text-align: center;
+            margin-right: 110px;
+
+        }
+
+        .mgr-20 {
+
+            text-align: center;
+            margin-right: 50px;
+        }
+
+        .schedule {
+            background-color: #d4f3ff;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 48, 48, 0.1);
+            padding: 20px;
+
+            margin: 20px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .schedule h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .schedule .day {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .schedule label {
+            display: inline-block;
+            width: 80px;
+            font-weight: bold;
+        }
+
+        .schedule input[type="text"] {
+            width: 130px;
+            margin-right: 10px;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .schedule input[type="button"] {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .schedule input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        .schedule .you {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 18px;
+            color: #2c2424;
+
+        }
+
+        .schedule #classes {
+            margin-top: 20px;
+            max-width: 800px;
+            text-align: start;
+            margin-left: 30%;
+        }
+
+        .schedule .class {
+            margin-bottom: 10px;
+            padding-left: 20px;
+
+            font-size: 18px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="container">
+            <div class="schedule">
+                <h1>予定いちらん</h1>
+
+                <div>
+                    <p style="margin-bottom: 0px;"> <span class="mgr-20"></span><span class="mgr-10">日曜日</span><span
+                            class="mgr-10">月曜日</span><span class="mgr-10">火曜日</span><span class="mgr-10">水曜日</span><span
+                            class="mgr-10">木曜日</span><span class="mgr-10">金曜日</span>土曜日</p>
+                    <label>1限目:</label>
+                    <input type="text" id="sunClass1">
+                    <input type="text" id="sunClass2">
+                    <input type="text" id="sunClass3">
+                    <input type="text" id="sunClass4">
+                    <input type="text" id="sunClass5">
+                    <input type="text" id="sunClass6">
+                    <input type="text" id="sunClass7">
+                </div>
+                <div>
+                    <label>2限目:</label>
+                    <input type="text" id="monClass1">
+                    <input type="text" id="monClass2">
+                    <input type="text" id="monClass3">
+                    <input type="text" id="monClass4">
+                    <input type="text" id="monClass5">
+                    <input type="text" id="monClass6">
+                    <input type="text" id="monClass7">
+
+                </div>
+                <div>
+                    <label>3限目:</label>
+                    <input type="text" id="tueClass1">
+                    <input type="text" id="tueClass2">
+                    <input type="text" id="tueClass3">
+                    <input type="text" id="tueClass4">
+                    <input type="text" id="tueClass5">
+                    <input type="text" id="tueClass6">
+                    <input type="text" id="tueClass7">
+                </div>
+                <div>
+                    <label>4限目:</label>
+                    <input type="text" id="wedClass1">
+                    <input type="text" id="wedClass2">
+                    <input type="text" id="wedClass3">
+                    <input type="text" id="wedClass4">
+                    <input type="text" id="wedClass5">
+                    <input type="text" id="wedClass6">
+                    <input type="text" id="wedClass7">
+                </div>
+                <div>
+                    <label>5限目:</label>
+                    <input type="text" id="thuClass1">
+                    <input type="text" id="thuClass2">
+                    <input type="text" id="thuClass3">
+                    <input type="text" id="thuClass4">
+                    <input type="text" id="thuClass5">
+                    <input type="text" id="thuClass6">
+                    <input type="text" id="thuClass7">
+                </div>
+                <div>
+                    <label>6限目:</label>
+                    <input type="text" id="friClass1">
+                    <input type="text" id="friClass2">
+                    <input type="text" id="friClass3">
+                    <input type="text" id="friClass4">
+                    <input type="text" id="friClass5">
+                    <input type="text" id="friClass6">
+                    <input type="text" id="friClass7">
+                </div>
+                <div>
+                    <label>7限目:</label>
+                    <input type="text" id="satClass1">
+                    <input type="text" id="satClass2">
+                    <input type="text" id="satClass3">
+                    <input type="text" id="satClass4">
+                    <input type="text" id="satClass5">
+                    <input type="text" id="satClass6">
+                    <input type="text" id="satClass7">
+                </div>
+
+                <input type="button" onclick="saveClasses()" value="反映 ﾎﾟﾁ…(｀･ω･´)ﾉ凸">
+
+                <input type="button" onclick="next_day()" value="次の日→">
+                <div class="you"><span id="you"></span>曜日のよてい。あってる？</div>
+
+                <div id="classes">
+                    <div id="class1" class="class"></div>
+                    <div id="class2" class="class"></div>
+                    <div id="class3" class="class"></div>
+                    <div id="class4" class="class"></div>
+                    <div id="class5" class="class"></div>
+                    <div id="class6" class="class"></div>
+                    <div id="class7" class="class"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <script src="PBL_1.js"></script>
+    <li><a href="PBL.html">メインメニューへ</a></li>
+</body>
+
+</html>
