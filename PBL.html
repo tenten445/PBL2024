@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="data:,">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="toggle_switch.css">
+  <link rel="stylesheet" href="hukidasi.css">
+  <link rel="stylesheet" href="main.css">
+
+
+</head>
+
+<body>
+  <div id="main">
+    <div class="circle"></div>
+    <h1>今日の授業スケジュール</h1>
+    <div id="main_system">
+
+      <h2>今日は<span id="week"></span>曜日ですたぶん。</h2>
+      <!---  <h2>1時間目<span id="week"></span></h2>-->
+    </div>
+    <button id="next_day" onClick="nextday()">次の日</button>
+    <button id="get_oday" onclick="gettoday()">今日</button>
+    <button id="reset" onclick="reset()">リセット</button>
+    <script src="PBL.js"></script>
+
+    <script src="task.js"></script>
+    <h3>編集モード</h3>
+    <!--- トグルスイッチ -->
+    <div class="switchArea">
+      <input type="checkbox" id="switch1">
+
+      <label for="switch1"><span></span></label>
+      <div id="swImg"></div>
+    </div>
+    
+  </div>
+  <div id="main2">
+    <div class="circle"></div>
+    <h2>タスク一覧(入力)</h2>
+   <!-- <h2><span><img src="保育園・幼稚園の女の子.png" alt="Description of the image" ></span></h2>
+    -->
+
+     <div id="main3">
+    
+    <h2 id="mess">koko</h2>
+   <script src="youjo_talk.js"></script>
+    
+    <img src="https://x.gd/HEXiv" alt="Description of the image" >
+  </div>
+  
+   <input id="taskInput" type="text" />
+    
+    <button id="addTaskButton">登録</button>
+    
+   
+    <div id="tasksContainer"></div>
+  </div>
+  
+  </div>
+
+</body>
+
+</html>
